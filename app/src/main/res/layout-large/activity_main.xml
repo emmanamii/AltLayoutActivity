@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="45dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="72dp"
+        android:paddingTop="8dp"
+        android:text="@string/email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="96dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo"
+        tools:text="Email Address" />
+
+    <TextView
+        android:id="@+id/extensionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="144dp"
+        android:paddingTop="8dp"
+        android:text="@string/extension"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo" />
+
+    <TextView
+        android:id="@+id/extension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="176dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo"
+        tools:text="Extension" />
+
+    <TextView
+        android:id="@+id/departmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="220dp"
+        android:paddingTop="8dp"
+        android:text="@string/department"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo" />
+
+    <TextView
+        android:id="@+id/department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="260dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintStart_toStartOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo"
+        tools:text="Department name" />
+
+    <TextView
+        android:id="@+id/supervisorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="328dp"
+        android:paddingTop="8dp"
+        android:text="@string/supervisor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_photo" />
+
+    <TextView
+        android:id="@+id/supervisor"
+        android:layout_width="32dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="360dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/supervisorLabel"
+        tools:text="Supervisor\'s Name" />
+
+    <TextView
+        android:id="@+id/directReportsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/direct_reports"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/directReportsRecyclerView"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/directReportsRecyclerView"
+        android:layout_width="532dp"
+        android:layout_height="301dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/directReportsLabel" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
